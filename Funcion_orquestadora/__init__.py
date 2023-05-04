@@ -24,6 +24,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         precio = float((str(luces).split('class="despues">')[1][0:5]).replace(',', '.'))
         
         return(pd.DataFrame(data = [[titulo, autor, precio]], columns = ["Título", "Autor", "Precio"]))
+    
+    libro = nueva_info(i)
 
-    logging.info(nueva_info(i))
+    logging.info(libro)
     
